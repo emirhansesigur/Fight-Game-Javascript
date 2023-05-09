@@ -4,13 +4,12 @@ function runGame() { // requestAnimationFrame ile ekrana video benzeri bir gorun
     document.getElementById("playerHealth").innerHTML = player.health; // kalan saglık sayiları ekrana basilir.
     document.getElementById("enemyHealth").innerHTML = enemy.health;
 
-    ctx.fillStyle = 'black' // bu satir calisir, bir satir alttaki fillRect siyaha boyanir.
-
-
+    ctx.fillStyle = 'black'; // bu satir calisir, bir satir alttaki fillRect siyaha boyanir.
     ctx.fillRect(0, 0, canvas.width, canvas.height); // savascinin hareket ettigini gormek icin position x ve y degerleri ile oynanir. ekleme ya da cikartma sonucu eksi konumunun silinmedi ekrani anlik olarak siyah yapariz
 
-    player.update('red', 'white') // update icindeki ctx.fillStyle da savascilarin renginin kirmizi olmasini saglar.
-    enemy.update('green', 'blue')
+
+    player.update(); // update icindeki ctx.fillStyle da savascilarin renginin kirmizi olmasini saglar.
+    enemy.update();
 
     player.movement.x = 0; // default olarak 0 degerini veriyoruz. Diger durumlarda degisiyor. Bu satir olmazsa keyup da calismiyor.
     player.movement.y = 0;

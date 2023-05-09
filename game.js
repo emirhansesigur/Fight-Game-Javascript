@@ -20,7 +20,9 @@ const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslan
     attackRectangleStartPoint: {
         x: 0,
         y: 0
-    }
+    },
+    color: 'red',
+    attackBoxColor: 'green'
 })
 
 const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
@@ -36,6 +38,9 @@ const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
         x: -50,
         y: 0
     }
+    ,
+    color: 'blue',
+    attackBoxColor : 'pink'
 })
 
 runGame();

@@ -1,5 +1,27 @@
+class Image {
+    constructor({ position, imgSrc }) {
+        this.position = position;
+        this.width = 50;
+        this.position = 150;
+        this.image = new Image();
+        this.image = imgSrc;
+        this.image.src = imgSrc;
+    }
+
+    draw() {
+        ctx.drawImage(this.image, this.position.x, this.position.y);
+    }
+
+    update() {
+        this.draw();
+    }
+}
+
+
 class BasicStrct { //Savascilarin temel yapisi: goruntu eklenmeden once savascilar dikdortgen seklindedir.
-    constructor({ position, movement, attackRectangleStartPoint }) {
+    constructor({ position, movement, attackRectangleStartPoint, color, attackBoxColor }) {
+        this.attackBoxColor = attackBoxColor
+        this.color = color;
         this.health = 10;
         this.position = position;
         this.movement = movement;
@@ -18,12 +40,12 @@ class BasicStrct { //Savascilarin temel yapisi: goruntu eklenmeden once savascil
         this.isAttacking;
     }
 
-    drawPlayer(color, attackBoxColor) { // drowF= drow Fighter, her .... dongusunde gerekli pozisyonu ekrana yazilir.
-        ctx.fillStyle = color;
+    drawPlayer() { // drowF= drow Fighter, her .... dongusunde gerekli pozisyonu ekrana yazilir.
+        ctx.fillStyle = this.color;
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height) // Savascilar burada verdigimiz boyutlardadir.
 
         if (this.isAttacking) { // this.isAttacking yazdık dikkat et // odev icin acıklama: eğer isAttacking true olursa calısacak ve atilan yumruklar gorunur hale gelecek
-            ctx.fillStyle = attackBoxColor;
+            ctx.fillStyle = this.attackBoxColor;
             ctx.fillRect(
                 this.attackBox.position.x,
                 this.attackBox.position.y,
@@ -32,8 +54,8 @@ class BasicStrct { //Savascilarin temel yapisi: goruntu eklenmeden once savascil
         }
     }
 
-    update(color, attackBoxColor) { // move Fighter ile savascilarin harekete etmelerini saglariz.
-        this.drawPlayer(color, attackBoxColor); // her cagirildiginda pozisyonu yenilenecek
+    update() { // move Fighter ile savascilarin harekete etmelerini saglariz.
+        this.drawPlayer(this.color, this.attackBoxColor); // her cagirildiginda pozisyonu yenilenecek
 
         //vurus icin kullanilan yapiların guncellenmesi icin
         this.attackBox.position.x = this.position.x + this.attackBox.attackRectangleStartPoint.x;

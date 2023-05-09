@@ -16,6 +16,12 @@ const keys = { // tuslari kontrol etmemizi saglayan
     },
     ArrowUp: {
         pressed: false
+    },
+    Space: {
+        pressed: false
+    },
+    ArrowDown: {
+        pressed: false
     }
 }
 
@@ -36,7 +42,10 @@ window.addEventListener('keydown', (KeyCode) => {
             keys.w.pressed = true;
             break;
         case ' ':
-            player.attack();
+            if (!keys.Space.pressed) {
+                player.attack();
+                keys.Space.pressed = true;
+            }
             break;
 
         // enemy hareketleri    
@@ -52,8 +61,10 @@ window.addEventListener('keydown', (KeyCode) => {
             keys.ArrowUp.pressed = true;
             break;
         case 'ArrowDown':
-            enemy.attack();
-            break;
+            if (!keys.ArrowDown.pressed) {
+                enemy.attack();
+                keys.ArrowDown.pressed = true;
+            }
     }
 })
 
@@ -72,6 +83,8 @@ window.addEventListener('keyup', (KeyCode) => {
             // keys.w.pressed = false;
             player.movement.y -= 200;
             break;
+        case ' ':
+            keys.Space.pressed = false;
 
         // enemy hareketleri    
         case 'ArrowRight':
@@ -83,6 +96,9 @@ window.addEventListener('keyup', (KeyCode) => {
         case 'ArrowUp':
             // keys.ArrowUp.pressed = false;
             enemy.movement.y -= 200;
+            break;
+        case 'ArrowDown':
+            keys.ArrowDown.pressed = false;
             break;
     }
 

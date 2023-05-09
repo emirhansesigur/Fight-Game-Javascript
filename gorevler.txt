@@ -11,3 +11,5 @@
 // sure ve kazanma cubğunda etrafı siyah ile çevrelenecek.
 
 -> karakterin nasıl hareket ettigi ogren. Sonra 1 karektere sen de uygula, sonra arka plan.
+
+-> NO sure farkıyla kazanamsı için 5 puan falk olabilir.
