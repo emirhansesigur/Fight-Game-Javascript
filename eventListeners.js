@@ -74,17 +74,18 @@ window.addEventListener('keyup', (KeyCode) => {
         case 'D':
             keys.d.pressed = false;
             break;
-        case 'a' || 'A':
+        case 'a':
         case 'A':
             keys.a.pressed = false;
             break;
-        case 'w' || 'W':
+        case 'w':
         case 'W':
-            // keys.w.pressed = false;
-            player.movement.y -= 200;
+            keys.w.pressed = false;
+            // player.movement.y -= 200;
             break;
         case ' ':
             keys.Space.pressed = false;
+            break;
 
         // enemy hareketleri    
         case 'ArrowRight':
@@ -94,8 +95,8 @@ window.addEventListener('keyup', (KeyCode) => {
             keys.ArrowLeft.pressed = false;
             break;
         case 'ArrowUp':
-            // keys.ArrowUp.pressed = false;
-            enemy.movement.y -= 200;
+            keys.ArrowUp.pressed = false;
+            // enemy.movement.y -= 200;
             break;
         case 'ArrowDown':
             keys.ArrowDown.pressed = false;

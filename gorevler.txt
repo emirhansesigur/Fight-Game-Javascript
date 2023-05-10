@@ -1,7 +1,4 @@
-++ oyunun saniyesinin anında gözükmesi.
-++ oyun bittiyse vurunca skor degismeyecek
-
-// ust uste 3 vurus yaparsa puan alsın. -> en sonra da oyun ustunlugu tablosu yapılabilir.
+yukari ilerleme degerler degistir -> listeners
 // ya da kaç kaç gidiyordu tablo olarak verilebilir. ilk kim vurdu sonra kim gibi.
 
 -> ZOR: listener larda degeri degistirme -> oyun fonksyonunda degistir.
@@ -12,4 +9,3 @@
 
 -> karakterin nasıl hareket ettigi ogren. Sonra 1 karektere sen de uygula, sonra arka plan.
 
--> NO sure farkıyla kazanamsı için 5 puan falk olabilir.

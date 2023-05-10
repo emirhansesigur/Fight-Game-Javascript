@@ -24,12 +24,24 @@ function runGame() { // requestAnimationFrame ile ekrana video benzeri bir gorun
     } else if (keys.a.pressed && player.lastKey === 'a') {
         player.movement.x = -10;
     }
+    if(keys.w.pressed){ 
+        player.movement.y -= 50;
+        setTimeout(() => { 
+            keys.w.pressed = false;
+        }, 50);
+    }
 
     // enemy nin hareketleri
-    if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') { // d ye basilirken a basilirse lastKey false olacagindan d calisacaktir.
+    if (keys.ArrowRight.pressed) { // d ye basilirken a basilirse lastKey false olacagindan d calisacaktir.
         enemy.movement.x = 10;
     } else if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
         enemy.movement.x = -10;
+    }
+    if(keys.ArrowUp.pressed){ 
+        enemy.movement.y -= 50;
+        setTimeout(() => { 
+            keys.ArrowUp.pressed = false;
+        }, 50);
     }
 
     // altta yer alan if bologunda saldiri tutsuna basildigi anda birbirine dokunuyorlar mi kontrol ederiz
