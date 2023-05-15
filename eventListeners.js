@@ -48,7 +48,7 @@ window.addEventListener('keydown', (KeyCode) => {
             }
             break;
 
-            // enemy hareketleri    
+        // enemy hareketleri    
         case 'ArrowRight':
             keys.ArrowRight.pressed = true;
             enemy.lastKey = 'ArrowRight';
@@ -62,7 +62,7 @@ window.addEventListener('keydown', (KeyCode) => {
             break;
         case 'ArrowDown':
             if (!keys.ArrowDown.pressed) {
-                enemy.attack(); // saldiri yapar
+                enemy.attack();
                 keys.ArrowDown.pressed = true;
             }
     }
@@ -87,7 +87,7 @@ window.addEventListener('keyup', (KeyCode) => {
             keys.Space.pressed = false;
             break;
 
-            // enemy hareketleri    
+        // enemy hareketleri    
         case 'ArrowRight':
             keys.ArrowRight.pressed = false;
             break;

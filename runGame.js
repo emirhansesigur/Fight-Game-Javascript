@@ -7,7 +7,7 @@ function runGame() { // requestAnimationFrame ile ekrana video benzeri bir gorun
     ctx.fillStyle = 'black'; // bu satir calisir, bir satir alttaki fillRect siyaha boyanir.
     ctx.fillRect(0, 0, canvas.width, canvas.height); // savascinin hareket ettigini gormek icin position x ve y degerleri ile oynanir. ekleme ya da cikartma sonucu eksi konumunun silinmedi ekrani anlik olarak siyah yapariz
 
-
+    backgraund.draw();
     player.update(); // update icindeki ctx.fillStyle da savascilarin renginin kirmizi olmasini saglar.
     enemy.update();
 

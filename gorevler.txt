@@ -1,0 +1,11 @@
+yukari ilerleme degerler degistir -> listeners
+// ya da kaç kaç gidiyordu tablo olarak verilebilir. ilk kim vurdu sonra kim gibi.
+
+-> ZOR: listener larda degeri degistirme -> oyun fonksyonunda degistir.
+
+// kazananı belli etmek için querysellecter ile birşeyler yap.
+
+// sure ve kazanma cubğunda etrafı siyah ile çevrelenecek.
+
+-> karakterin nasıl hareket ettigi ogren. Sonra 1 karektere sen de uygula, sonra arka plan.
+

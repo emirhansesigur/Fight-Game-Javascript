@@ -8,11 +8,15 @@ let gravity = 4; // yercekimi degeri
 
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+const backgraund = new ImageClass('./bg.jpg')
+
+
 const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslangicindaki position ve movement degerleri 
     position: {
-        x: 100,
+        x: 0,
         y: 0
     },
+    imgSource: './1.png',
     movement: {
         x: 0,
         y: 0
@@ -27,9 +31,10 @@ const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslan
 
 const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
     position: {
-        x: 800,
+        x: 80,
         y: 0
     },
+    imgSource: './2.png',
     movement: {
         x: 0,
         y: 0
@@ -37,9 +42,12 @@ const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
     attackRectangleStartPoint: {
         x: -50,
         y: 0
-    },
+    }
+    ,
     color: 'blue',
     attackBoxColor: 'pink'
 })
 
 runGame();
+
+

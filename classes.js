@@ -1,32 +1,14 @@
-class Image {
-    constructor({ position, imgSrc }) {
-        this.position = position;
-        this.width = 50;
-        this.position = 150;
-        this.image = new Image();
-        this.image = imgSrc;
-        this.image.src = imgSrc;
-    }
-
-    draw() {
-        ctx.drawImage(this.image, this.position.x, this.position.y);
-    }
-
-    update() {
-        this.draw();
-    }
-}
-
-
 class BasicStrct { //Savascilarin temel yapisi: goruntu eklenmeden once savascilar dikdortgen seklindedir.
-    constructor({ position, movement, attackRectangleStartPoint, color, attackBoxColor }) {
+    constructor({ position, imgSource, movement, attackRectangleStartPoint, color, attackBoxColor }) {
+        this.image = new Image();
+        this.image.src = imgSource;
         this.attackBoxColor = attackBoxColor
         this.color = color;
         this.health = 10;
         this.position = position;
         this.movement = movement;
-        this.height = 160;
-        this.width = 50;
+        this.height = 300;
+        this.width = 250;
         this.lastKey;
         this.attackBox = {
             position: {
@@ -41,8 +23,16 @@ class BasicStrct { //Savascilarin temel yapisi: goruntu eklenmeden once savascil
     }
 
     drawPlayer() { // drowF= drow Fighter, her .... dongusunde gerekli pozisyonu ekrana yazilir.
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.position.x, this.position.y, this.width, this.height) // Savascilar burada verdigimiz boyutlardadir.
+        // ctx.fillStyle = this.color;
+        // ctx.fillRect(this.position.x, this.position.y, this.width, this.height) // Savascilar burada verdigimiz boyutlardadir.
+        if(keys.ArrowUp.pressed){
+            this.imgSource = './1hit.png';
+            ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+        else{
+            this.imgSource = './1.png';
+            ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
 
         if (this.isAttacking) { // this.isAttacking yazdık dikkat et // odev icin acıklama: eğer isAttacking true olursa calısacak ve atilan yumruklar gorunur hale gelecek
             ctx.fillStyle = this.attackBoxColor;
@@ -91,6 +81,26 @@ class BasicStrct { //Savascilarin temel yapisi: goruntu eklenmeden once savascil
         }, 100)
     }
 
+
+}
+
+class ImageClass { //Savascilarin temel yapisi: goruntu eklenmeden once savascilar dikdortgen seklindedir.
+    constructor(imgSource) {
+        this.image = new Image();
+        this.image.src = imgSource;
+
+        this.height = 300;
+        this.width = 250;
+    }
+
+    draw() {
+        ctx.drawImage(this.image, 0, 0);
+
+        // update() {
+
+        // }
+
+    }
 
 }
 
