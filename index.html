@@ -10,17 +10,26 @@
 </head>
 
 <body>
+
     <div id="topDiv">
+
         <div id="boxes">
             <!-- playerHealth -->
             <div id="playerHealth"></div>
             <!-- Timer -->
-            <div id="time">5</div>
+            <div id="time">60</div>
             <!-- enemyHealth -->
             <div id="enemyHealth"></div>
         </div>
         <div id="winnerStatus"></div>
         <canvas id="canvas"></canvas>
+        <div style="width: 940px; margin-left: 60px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">
+            <p>Ben Emirhan Sesigür. Web Programlama dersi kapsamında yapmış olduğum projemi sizlere sunuyorum.</p>
+            <p>2 kişilik bir dövüş oyunu yaptım. Bu oyunda sağda yer alan oyuncu Player adında, solda yer alan oyuncu ise Enemy.</p>
+            <p>Player w, a, d ve space tuşları ile, Enemy ise sağ ok, sol ok, üst ok, ve alt ok ile oynanmaktadır. Player space tuşu ile vuruş yaparken, Enemy alt oku kullanır. Geri kalan tuşlar ise oyuncuyu hareket ettirmek için kullanılır. CapsLock açık
+                kalabileceğinden dolayı W, A, D harfleri ile de oynanabilmektedir.</p>
+            <p> Oyunda her 2 karekterin de 10 canı vardır ve başarılı vuruşlarda canları azalmaktadır. Süre biterse en çok canı olan oyunu kazanırken, süre bitmeden bir oyuncunun canı 0 a düşerse oyunu kaybeder.</p>
+        </div>
     </div>
     <script src="eventListeners.js"></script>
     <script src="classes.js"></script>

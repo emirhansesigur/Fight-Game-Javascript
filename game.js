@@ -13,7 +13,7 @@ const backgraund = new ImageClass('./bg.jpg')
 
 const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslangicindaki position ve movement degerleri 
     position: {
-        x: 0,
+        x: 100,
         y: 0
     },
     imgSource: './1.png',
@@ -22,16 +22,16 @@ const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslan
         y: 0
     },
     attackRectangleStartPoint: {
-        x: 0,
-        y: 0
+        x: 100,
+        y: 50
     },
     color: 'red',
-    attackBoxColor: 'green'
+    attackBoxColor: 'white'
 })
 
 const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
     position: {
-        x: 80,
+        x: 700,
         y: 0
     },
     imgSource: './2.png',
@@ -40,14 +40,11 @@ const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
         y: 0
     },
     attackRectangleStartPoint: {
-        x: -50,
-        y: 0
-    }
-    ,
+        x: -10,
+        y: 50
+    },
     color: 'blue',
     attackBoxColor: 'pink'
 })
 
 runGame();
-
-
