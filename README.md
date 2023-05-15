@@ -14,11 +14,10 @@ Player w, a, d ve space tuşları ile, Enemy ise sağ ok, sol ok, üst ok, ve al
 Oyunu oynamak için şu [linke](http://fightgamejavascript.eu5.org/) gidebilirsiniz .  
 
 
-Oyun ile ilgili tanıtım videosuna [buraya](https://www.youtube.com/watch?v=UA0XSlRFKEE&ab_channel=EmirhanSesig%C3%BCr) tıklayarak ulaşabilirsiniz.
-
+Oyun ile ilgili tanıtım videosuna [buraya](https://www.youtube.com/watch?v=EFWBaEiocKE&ab_channel=EmirhanSesig%C3%BCr) tıklayarak ulaşabilirsiniz.
 
 
 
 ![game-1](https://raw.githubusercontent.com/emirhansesigur/Fight-Game-Javascript/main/images/e1.PNG?token=GHSAT0AAAAAABY6PZQB77EWGFDBWHWQ4CS4ZDCMETQ)
 
-![game-2](https://raw.githubusercontent.com/emirhansesigur/Fight-Game-Javascript/main/images/e2.PNG?token=GHSAT0AAAAAABY6PZQBNZDNB6XJQVSC5MSIZDCME7Q)
+![game-2](https://raw.githubusercontent.com/emirhansesigur/Fight-Game-Javascript/main/images/e2.PNG)
