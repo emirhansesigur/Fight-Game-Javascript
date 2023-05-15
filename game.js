@@ -10,7 +10,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslangicindaki position ve movement degerleri 
     position: {
-        x: 0,
+        x: 100,
         y: 0
     },
     movement: {
@@ -27,7 +27,7 @@ const player = new BasicStrct({ // player nesnesini olusturuyotuz. oyunun baslan
 
 const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
     position: {
-        x: 80,
+        x: 800,
         y: 0
     },
     movement: {
@@ -37,12 +37,9 @@ const enemy = new BasicStrct({ // enemy nesnesi olusturuldu
     attackRectangleStartPoint: {
         x: -50,
         y: 0
-    }
-    ,
+    },
     color: 'blue',
-    attackBoxColor : 'pink'
+    attackBoxColor: 'pink'
 })
 
 runGame();
-
-

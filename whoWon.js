@@ -1,4 +1,4 @@
-let gameTime = 4; // oyunu kac saniye surecegini belirler
+let gameTime = 59; // oyunu kac saniye surecegini belirler. 60 sn surecek. index.html de oyle yazildi.
 let isGameOver = false;
 let isTimeout = false;
 let healthDifference; //+ ise player, - ise enemy, 0 ise berabere
@@ -35,12 +35,10 @@ function playerOrEnemyWon() {
         else {
             document.querySelector('#winnerStatus').innerHTML = "Zaman Doldu - BERABERE";
         }
-    }
-    else if (enemy.health == 0) { // 
+    } else if (enemy.health == 0) { // 
         document.querySelector('#winnerStatus').style.display = 'flex';
         document.querySelector('#winnerStatus').innerHTML = "PLAYER KAZANDI";
-    }
-    else if (player.health == 0) { // 
+    } else if (player.health == 0) { // 
         document.querySelector('#winnerStatus').style.display = 'flex';
         document.querySelector('#winnerStatus').innerHTML = "ENEMY KAZANDI";
     }
